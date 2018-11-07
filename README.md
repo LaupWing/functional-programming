@@ -1,7 +1,7 @@
 # Functional Programming
 Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
 
-##Onderzoeksvragen
+## Onderzoeksvragen
 
 * Na de opkomst van de Smartphones zijn er meer E-boeken bijgekomen dan fysieke boeken
   * In welke jaar was de opkomst van Smarthphones
@@ -25,7 +25,7 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
   * CD varianten in 2013 t/m 2018
   * Afgenomen varianten per jaar vanaf 2013
 
-**Uiteindelijke Onderzoeksvraag:**
+## Uiteindelijke Onderzoeksvraag:
 
 De variatie in formaten(niet de afmetingen, maar fysieke formaat zoals cd, dvd etc) zijn de afgelopen jaren geleidelijk afgenonomen.
 
@@ -131,8 +131,45 @@ function filterByYear(booklist) {
 * Als er een function in de variable zit is hetgeen wat de function returned wat in de variable zich bevind. Als de function een array terugstuurd zit er in de variabele een array
 
 ### Day 5: Vrijdag 2 november 2018
-Tijdens het testen naar een andere zoekterm liet mijn terminal alweer een undefined errror zien.
+Tijdens het testen naar een andere zoekterm liet mijn terminal alweer een undefined errror zien. Na lang zoeken waar het probleem lag kwam ik erachter dat sommige formats van boeken meerder formats beschikken die in een array zitten. Maar tegen de tijd dat ik dit gevonden had was het al tijd om naar huis te gaan
 
+**Ontdekkingen**
+* Sommige categoriën hebbenn meerdere waardes die weer in een array zitten
+
+### Day 6: Maandag 5 november 2018
+Na de ontdekking van afgelopen vrijdag probeerde ik op maandag 5 november dit probleem op te lossen. Dit heb ik gedaan door aan de object property format een function aan te koppelen die meerdere if statements heeft om de array te laten zien.
+```js
+function makeBookObject(book) {
+  bookObject = {
+    // Credits aan Joost
+    title: (typeof book.titles === "undefined" || typeof book.titles.title === "undefined") ? 'Titel is onbekend' : book.titles.title.$t,
+    taal: (typeof book.languages === "undefined" || typeof book.languages.language === "undefined") ? 'Taal onbekend' : book.languages.language.$t,
+    jaartal: (typeof book.publication === "undefined" || typeof book.publication.year === "undefined") ? 'Jaar onbekend' : book.publication.year.$t,
+    author: (typeof book.authors === "undefined" || typeof book.authors['main-author'] === "undefined") ? "Auteur onbekend" : book.authors['main-author'].$t,
+    format: checkFormat(book)
+  }
+  array.push(bookObject)
+}
+
+function checkFormat(book) {
+  if (book.formats) {
+    if (book.formats.format.$t) {
+      return book.formats.format.$t
+    } else {
+      let formats = [];
+      book.formats.format.forEach(format => {
+        formats.push(format.$t);
+      });
+      return formats;
+    }
+  } else {
+    return "Formaat is onbekend"
+  }
+}
+```
+**Ontdekkingen**
+* Het is mogelijk om een function aan een object property te hangen.
+* In een if-stament kan je nog een if-statment zetten om te kijken naar de verschillende lagen.
 
 # Honerable Mentions
 **Wouter:**
