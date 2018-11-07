@@ -16,7 +16,7 @@ client.get('search', {
     sort: 'title',
     refine: true,
     librarian: true,
-    count: 1000,
+    count: 100,
     log: true
   })
   .then(results => {
@@ -36,7 +36,7 @@ client.get('search', {
     let sorteerJaar  = uniqueFormat.sort(sorteerOpjaar);
     let aantalFormaat = aantalFormaten(sorteerJaar);
     console.log(aantalFormaat)
-
+    console.log(testArray)
 
     fs.writeFile('log.json', JSON.stringify(jaartalObject), 'utf8', function() {})
   })
