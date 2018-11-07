@@ -1,7 +1,7 @@
 # Functional Programming
 Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
 
-**Onderzoeksvragen**
+##Onderzoeksvragen
 
 * Na de opkomst van de Smartphones zijn er meer E-boeken bijgekomen dan fysieke boeken
   * In welke jaar was de opkomst van Smarthphones
@@ -53,17 +53,14 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
         { translation: 'Titel',
           'search-method': 'title',
           'search-term':
-           "'Het geweten der natie' : de voormalige illegaliteit in het bevrijde
- Zuiden, september 1944-mei 1945 / door Henk Termeer",
+           "'Het geweten der natie' : de voormalige illegaliteit in het bevrijde Zuiden, september 1944-mei 1945 / door Henk Termeer",
           'search-type': 'fuzzy',
           '$t':
-           "'Het geweten der natie' : de voormalige illegaliteit in het bevrijde
- Zuiden, september 1944-mei 1945 / door Henk Termeer" },
+           "Het geweten der natie : de voormalige illegaliteit in het bevrijde Zuiden, september 1944-mei 1945 / door Henk Termeer" },
        'short-title':
         { translation: 'Korte titel',
           '$t':
-           "'Het geweten der natie' : de voormalige illegaliteit in het bevrijde
- Zuiden, september 1944-mei 1945" } },
+           "'Het geweten der natie' : de voormalige illegaliteit in het bevrijde Zuiden, september 1944-mei 1945" } },
     authors:
      { 'main-author':
         { 'search-method': 'author',
@@ -76,6 +73,7 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
           main: 'true',
           '$t': 'Termeer, H.J.C.' } }
 ```
+
 **Structuur:** Hierboven is een kleine stukje van de oba api beschreven. De code hierboven bestaat alleen maar uit de autor en de titel van een bepaalde boek, maar laat wel het algemene strucuur zien van de api. Elk categorie van een boek heeft meerdere lagen. Om bijvoorbeeld bij de titel te komen van een boek, moet je eerst naar titles > title > $t. Dus het de title van een boek kan je pas vinden in de $t property van het object.
 
 # Het Proces
@@ -83,6 +81,7 @@ In dit hoofdstuk kan je het proces zien van het project. Hierin worden vooral de
 
 ### Day 1: Dinsdag 29 oktober 2018
 In dag 1 heb ik de documentatie van de aquabrowser gelezen. Naast dat heb ik niet veel kunnen bereiken behalve de api draained kunnen krijgen op mijn terminial.
+
 **Ontdekkingen**
 * node index.js om de script te runnen via node
 
@@ -94,9 +93,9 @@ nog $t om de daadwerkelijke titel te vinden.
 
 
 ### Day 3: Woensdag 31 oktober 2018
-**Ontdekkingen**
-* Undefined error catchen
-* Sommige resultaten hebben bepaalde categoriën niet
+Dankzij Joost kon ik de undefined error catchen door middel van if statement. Want bij een undefined categorie kregen we steeds
+een error waardoor het helemaal niet meer werkte. Het probleem was dat sommige resultaten bepaalde categoriën niet hadden waardoor het
+een error gaf en daardoor werkte alles niet meer.
 
 ```js
   title: book.titles.title.$t,
@@ -106,12 +105,34 @@ nog $t om de daadwerkelijke titel te vinden.
   format: (typeof book.formats === "undefined" || typeof book.formats.format === "undefined") ? "Formaat onbekend" : book.formats.format.$t
 ```
 
-Dankzij Joost kon ik de undefined error catchen door middel van if statement. Want bij een undefined categorie kregen we steeds
-een error waardoor het helemaal niet meer werkte. Het probleem was dat sommige resultaten bepaalde categoriën niet hadden waardoor het
-een error gaf en daardoor werkte alles niet meer.
+**Ontdekkingen**
+* Undefined error catchen
+* Sommige resultaten hebben bepaalde categoriën niet
+* In de property van een object kan je een if statement declareren door de nieuwe ternary declaratie
+* Typeof is een methods om de type van een variabele te bekijken
 
-## Day 4: Donderdag 1 november 2018
-Vandaag heb ik de functions aangemaakt om bepaalde resultaten te krijgen op basis van bepaalde conditie's
+
+### Day 4: Donderdag 1 november 2018
+Vandaag heb ik de functions aangemaakt om bepaalde resultaten te krijgen op basis van bepaalde conditie's.
+```js
+let fromYear = filterByYear(array);
+
+function filterByYear(booklist) {
+  const result = booklist.filter(function(book) {
+    if (book.jaartal > 2008) {
+      return book
+    }
+  })
+  return result;
+}
+```
+**Ontdekkingen**
+* Een variabele kan een function bevatten
+* Als er een function in de variable zit is hetgeen wat de function returned wat in de variable zich bevind. Als de function een array terugstuurd zit er in de variabele een array
+
+### Day 5: Vrijdag 2 november 2018
+Tijdens het testen naar een andere zoekterm liet mijn terminal alweer een undefined errror zien.
+
 
 # Honerable Mentions
 **Wouter:**
