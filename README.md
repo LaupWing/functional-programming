@@ -1,7 +1,31 @@
 # Functional Programming
 Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
 
-**Onderzoeksvraag:**
+**Onderzoeksvragen**
+
+* Na de opkomst van de Smartphones zijn er meer E-boeken bijgekomen dan fysieke boeken
+  * In welke jaar was de opkomst van Smarthphones
+  * Hoeveel boeken zijn er elke jaar bijgekomen
+  * Hoeveel EBoeken zijn er elke jaar bijgekomen
+  * Wat is het verschil tussen de bijkomen boeken vs de EBoeken
+
+* Eboeken zijn de afgelopen jaren vaker geleent tov fysieke boeken
+  * Aantal uitgeleende boeken in de afgelopen jaren
+  * Aantal geleende eboeken in de afgelopen jaren
+
+* Nieuwe schrijvers na 2010 hebben vaker letter a in hun naam
+  * Hoeveel schrijvers zijn er na 2010 bijgekomen
+  * Hoeveel schrijers hebben de letter a in hun naam
+
+* Fysieke afmetingen van de kaft van boeken zijn steeds kleiner vanaf 2010
+  * Fysieke afmetingen van kaft in 2010
+  * Fysieke afmetingen van kaft in 2011 t/m 2018
+
+* CD varianten van boeken zijn sinds 2013 tot heden geleidelijk afgenomen
+  * CD varianten in 2013 t/m 2018
+  * Afgenomen varianten per jaar vanaf 2013
+
+**Uiteindelijke Onderzoeksvraag:**
 
 De variatie in formaten(niet de afmetingen, maar fysieke formaat zoals cd, dvd etc) zijn de afgelopen jaren geleidelijk afgenonomen.
 
@@ -54,17 +78,13 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
 ```
 **Structuur:** Hierboven is een kleine stukje van de oba api beschreven. De code hierboven bestaat alleen maar uit de autor en de titel van een bepaalde boek, maar laat wel het algemene strucuur zien van de api. Elk categorie van een boek heeft meerdere lagen. Om bijvoorbeeld bij de titel te komen van een boek, moet je eerst naar titles > title > $t. Dus het de title van een boek kan je pas vinden in de $t property van het object.
 
-**Undefined error:**  
-
-
-
-
-
 # Het Proces
 In dit hoofdstuk kan je het proces zien van het project. Hierin worden vooral de technische vooruitgang beschreven. Wat ik geleerd heb staat dan per dag beschreven.
 
 ## Day 1: Dinsdag 29 oktober 2018
-
+In dag 1 heb ik de documentatie van de aquabrowser gelezen. Naast dat heb ik niet veel kunnen bereiken behalve de api draained kunnen krijgen op mijn terminial.
+**Ontdekkingen**
+*
 
 ## Day 2: Dinsdag 30 oktober 2018
 **Ontdekkingen**
@@ -95,5 +115,5 @@ Vandaag heb ik de functions aangemaakt om bepaalde resultaten te krijgen op basi
 
 # Honerable Mentions
 **Wouter:**
-Wouter heeft mij geholpen met vele functie's.<br>
+Wouter heeft mij geholpen met vele functie's schrijven. Zonder hem zou ik nog dagenlang vastzitten met hetzelfde probleem. Hij heeft de function jaartalFormatObject geschreven voor mij en de module geschreven waardoor ik meerdere items kon laten zien dan 20 in de terminal. Naast dat heeft hij ook sommige array methods in detail uitgelegt hoe ze werken. Wat een ware held.<br>
 **Joost:** Danzkij Joost kon ik de undefined errors catchen met een functie die hij heeft geschreven. Naast dat heeft hij mij ook haarfijn uitgelegt hoe de database werkte en dat er meerdere lagen waren. Hierdoor gaf hij mij meer hoop om door te gaan met coderen.
