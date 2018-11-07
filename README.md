@@ -81,19 +81,19 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
 # Het Proces
 In dit hoofdstuk kan je het proces zien van het project. Hierin worden vooral de technische vooruitgang beschreven. Wat ik geleerd heb staat dan per dag beschreven.
 
-## Day 1: Dinsdag 29 oktober 2018
+### Day 1: Dinsdag 29 oktober 2018
 In dag 1 heb ik de documentatie van de aquabrowser gelezen. Naast dat heb ik niet veel kunnen bereiken behalve de api draained kunnen krijgen op mijn terminial.
 **Ontdekkingen**
-*
+* node index.js om de script te runnen via node
 
-## Day 2: Dinsdag 30 oktober 2018
+### Day 2: Dinsdag 30 oktober 2018
 **Ontdekkingen**
 * De database werkt in lagen in lagen dus als je bij een titel wilt komen moet je naar titles > title gaan en vervolgens
 nog $t om de daadwerkelijke titel te vinden.
 * Door middel van facet etc. kan ik voordat er uberhaupt gezocht word al gaan filteren door de database.
 
 
-## Day 3: Woensdag 31 oktober 2018
+### Day 3: Woensdag 31 oktober 2018
 **Ontdekkingen**
 * Undefined error catchen
 * Sommige resultaten hebben bepaalde categoriën niet
