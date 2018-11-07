@@ -1,6 +1,10 @@
 # Functional Programming
 Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
+## Inhoudsopgave
+1. [Onderzoeksvragen](#onderzoeksvragen)
+2. [Huidige Onderzoeksvraag](#huidig)
 
+<a name="onderzoeksvragen"></a>
 ## Onderzoeksvragen
 
 * Na de opkomst van de Smartphones zijn er meer E-boeken bijgekomen dan fysieke boeken
@@ -25,6 +29,7 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
   * CD varianten in 2013 t/m 2018
   * Afgenomen varianten per jaar vanaf 2013
 
+<a name="huidig"></a>
 ## Uiteindelijke Onderzoeksvraag:
 
 De variatie in formaten(niet de afmetingen, maar fysieke formaat zoals cd, dvd etc) zijn de afgelopen jaren geleidelijk afgenonomen.
@@ -45,7 +50,7 @@ De variatie in formaten(niet de afmetingen, maar fysieke formaat zoals cd, dvd e
 * Jaren sorteren
 * De jaren clusteren (ervoor zorgen dat de jaren uniniek worden)
 
-# Data van de oba
+## Data van de oba
 Hieronder zie je de oba api structuur van title en author van een boek. Maar het structuur is min of meer overal hetzelfde.
 ```
 { titles:
@@ -76,7 +81,7 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
 
 **Structuur:** Hierboven is een kleine stukje van de oba api beschreven. De code hierboven bestaat alleen maar uit de autor en de titel van een bepaalde boek, maar laat wel het algemene strucuur zien van de api. Elk categorie van een boek heeft meerdere lagen. Om bijvoorbeeld bij de titel te komen van een boek, moet je eerst naar titles > title > $t. Dus het de title van een boek kan je pas vinden in de $t property van het object.
 
-# Het Proces
+## Het Proces
 In dit hoofdstuk kan je het proces zien van het project. Hierin worden vooral de technische vooruitgang beschreven. Wat ik geleerd heb staat dan per dag beschreven.
 
 ### Day 1: Dinsdag 29 oktober 2018
