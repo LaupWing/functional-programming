@@ -86,8 +86,8 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
 
 <a name="proces"></a>
 ## Schetsen
-![alt text](https://github.com/LaupWing/functional-programming/blob/master/Images/BarDiagram.jpg =250x)
-
+<img src="Images/BarDiagram.jpg" alt="drawing" width="250" style="transform: rotate(270deg)"/>
+<img src="Images/LineDiagram.jpg" alt="drawing" width="250" style="transform: rotate(270deg)"/>
 
 ## Het Proces
 In dit hoofdstuk kan je het proces zien van het project. In "Mijn proces verhaal" kan je de grote lijnen vinden van het proces in één groot verhaal. In "Dagelijkse proces" kan je het proces vinden per dag beschreven en in meer detail en meer technische details.
