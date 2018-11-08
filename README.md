@@ -1,5 +1,5 @@
 # Functional Programming
-Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
+Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api. De datavisualisatie moet gemaakt worden door de D3 package of via Observable. 
 
 
 ## Inhoudsopgave
@@ -223,7 +223,7 @@ function checkFormat(book) {
 
 <a name="resultaat"></a>
 ## Resultaat/Conclusie (Observable)
-Observable Linkje = [Klik hieroooo](https://beta.observablehq.com/@laupwing/d3-bar-chart)
+Observable Linkje = [Klik hieroooo](https://beta.observablehq.com/@laupwing/d3-bar-chart)<br>
 In de chart in Observable kan je zien dat er in het begin veel variatie te vinden en dat steeds weer afneemt. Op het eind van de diagram kan je ook weer zien dat het juist weer toeneemt. Dit bewijst het tegendeel van mijn hypothese dat het geleidelijk afneemt.
 
 <a name="honerable"></a>
