@@ -6,7 +6,10 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
 1. [Onderzoeksvragen](#onderzoeksvragen)
 2. [Huidige Onderzoeksvraag](#huidig)
 3. [Data van Oba](#dataOba)
-4. [Proces](#proces)
+4. [Schetsen](#schetsen)
+5. [Proces](#proces)
+6. [Resultaat/conclusie](#resultaat)
+7. [Honerable Mentions](#honerable)
 
 
 
@@ -40,7 +43,11 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
 <a name="huidig"></a>
 ## Uiteindelijke Onderzoeksvraag:
 
-De variatie in formaten(niet de afmetingen, maar fysieke formaat zoals cd, dvd etc) zijn de afgelopen jaren geleidelijk afgenonomen.
+Is de variatie in formaten(niet de afmetingen, maar fysieke formaat zoals cd, dvd etc) de afgelopen jaren afgenomen?
+
+**Hypothese**
+De variatie is langzamerhand steeds minder geworden, omdat cd formaten tegenwoordig niet meer gebruikt worden en vervangen zijn door de eboeken en fysieke boeken.
+
 
 **Deelvragen**
 * Hoeveel type formaten zijn er?
@@ -92,14 +99,16 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
 
 **Structuur:** Hierboven is een kleine stukje van de oba api beschreven. De code hierboven bestaat alleen maar uit de autor en de titel van een bepaalde boek, maar laat wel het algemene strucuur zien van de api. Elk categorie van een boek heeft meerdere lagen. Om bijvoorbeeld bij de titel te komen van een boek, moet je eerst naar titles > title > $t. Dus het de title van een boek kan je pas vinden in de $t property van het object.
 
-<a name="proces"></a>
 
+<a name="schetsen"></a>
 ## Schetsen
 Omdat mijn onderzoeksvraag vooral bestaat twee factoren namelijk  jaren en variatie in een bepaalde jaar. Daarom heb ik schetsen gemaakt van een simpele bar chart en lijn diagram. Dit zijn simpele diagrammen om mee te beginnen in D3. Ik begin liever zo simpel mogelijk om de basis te begrijpen en als ik dat begrijp ga ik wat moeilijker diagrammen proberen te maken.
 
 <img src="Images/BarDiagram.jpg" alt="drawing" width="250" style="transform: rotate(270deg)"/>
 <img src="Images/LineDiagram.jpg" alt="drawing" width="250" style="transform: rotate(270deg)"/>
 
+
+<a name="proces"></a>
 ## Het Proces
 In dit hoofdstuk kan je het proces zien van het project. In "Mijn proces verhaal" kan je de grote lijnen vinden van het proces in één groot verhaal. In "Dagelijkse proces" kan je het proces vinden per dag beschreven en in meer detail en meer technische details.
 
@@ -212,7 +221,13 @@ function checkFormat(book) {
 * Het is mogelijk om een function aan een object property te hangen.
 * In een if-stament kan je nog een if-statment zetten om te kijken naar de verschillende lagen.
 
-# Honerable Mentions
+<a name="resultaat"></a>
+## Resultaat/Conclusie (Observable)
+Observable Linkje = [Klik hieroooo](https://beta.observablehq.com/@laupwing/d3-bar-chart)
+In de chart in Observable kan je zien dat er in het begin veel variatie te vinden en dat steeds weer afneemt. Op het eind van de diagram kan je ook weer zien dat het juist weer toeneemt. Dit bewijst het tegendeel van mijn hypothese dat het geleidelijk afneemt.
+
+<a name="honerable"></a>
+## Honerable Mentions
 **Wouter:**
 Wouter heeft mij geholpen met vele functie's schrijven. Zonder hem zou ik nog dagenlang vastzitten met hetzelfde probleem. Hij heeft de function jaartalFormatObject geschreven voor mij en de module geschreven waardoor ik meerdere items kon laten zien dan 20 in de terminal. Naast dat heeft hij ook sommige array methods in detail uitgelegt hoe ze werken. Wat een ware held.
 
