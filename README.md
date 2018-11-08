@@ -87,7 +87,7 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
 <a name="proces"></a>
 
 ## Schetsen
-Omdat mijn onderzoeksvraag vooral bestaat twee factoren namelijk  jaren en variatie in een bepaalde jaar heb ik schetsen gemaakt van een simpele bar chart en lijn diagram.
+Omdat mijn onderzoeksvraag vooral bestaat twee factoren namelijk  jaren en variatie in een bepaalde jaar. Daarom heb ik schetsen gemaakt van een simpele bar chart en lijn diagram. Dit zijn simpele diagrammen om mee te beginnen in D3. Ik begin liever zo simpel mogelijk om de basis te begrijpen en als ik dat begrijp ga ik wat moeilijker diagrammen proberen te maken.
 
 <img src="Images/BarDiagram.jpg" alt="drawing" width="250" style="transform: rotate(270deg)"/>
 <img src="Images/LineDiagram.jpg" alt="drawing" width="250" style="transform: rotate(270deg)"/>
@@ -96,7 +96,7 @@ Omdat mijn onderzoeksvraag vooral bestaat twee factoren namelijk  jaren en varia
 In dit hoofdstuk kan je het proces zien van het project. In "Mijn proces verhaal" kan je de grote lijnen vinden van het proces in één groot verhaal. In "Dagelijkse proces" kan je het proces vinden per dag beschreven en in meer detail en meer technische details.
 
 ### Mijn proces verhaal
-Net zoals alle andere technische vakken dat ik op de opleiding CMD heb gehad was dat in het begin heel veel frustratie was. Ik begreep praktische niks maar door middel van veel vragen aan medestudenten werd ik steeds wijzer tot het punt dat ik andere mensen kon helpen. Persoonlijk vind ik het jammer dat ik in het begin vaak naar mensen moet afstappen om voor hulp te vragen. Daarom vraag ik actief naar mensen of ze mij hulp nodig hebben, omdat ik weet hoe naar het kan zijn om niet verder te gaan vanwege gebrek aan kennis.
+Net zoals alle andere technische vakken dat ik op de opleiding CMD heb gehad was dat er in het begin heel veel frustratie was. Ik begreep praktische niks, maar door middel van veel vragen aan medestudenten werd ik steeds wijzer tot het punt dat ik andere mensen kon helpen. Persoonlijk vind ik het jammer dat ik in het begin vaak naar mensen moet afstappen om voor hulp te vragen. Daarom vraag ik actief naar mensen of ze mij hulp nodig hebben, omdat ik weet hoe naar het kan zijn om niet verder te gaan vanwege gebrek aan kennis. Na het opdoen van veel kennis had ik meer vertrouwen om het zelf te doen en begon ik zelf functie's te schrijven en zelf ook errors op te lossen. Mijn waardevolste ontdekking is dat ik zoveel moet console.loggen om erachter te komen waar mijn code foutgaat. Uiteindelijk is het mijn na veel errors en syntaxen uitproberen is het mij gelukt om schone data te krijgen met een object met daarin de property's jaartal en variatie(de variatie in presentatie van content zoals boek, cd etc) 
 
 **Waar had ik het meest moeite mee**<br>
 Het lastigste vond ik wel dat de database van de oba uit verschillende lagen bestaat. Het was heel lastig voor mij om te ontdekken hoe ik door de verschillende lagen kan gaan om de echte uiteindelijke data te krijgen. Sommige data hadden zelfs nog een array in verwerkt.
