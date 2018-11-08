@@ -10,6 +10,7 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api. D
 5. [Proces](#proces)
 6. [Resultaat/conclusie](#resultaat)
 7. [Honerable Mentions](#honerable)
+8. [Bronnelijst](#bronnenlijst)
 
 
 
@@ -286,3 +287,9 @@ function makeBookObject(book) {
   array.push(bookObject)
 }
 ```
+
+<a name="bronnenlijst"></a>
+## Bronnenlijst
+Array Methods Syntaxes = [Klik hieroooo](https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array)<br>
+D3 Tutorial = [Klik hieroooo](https://www.lynda.com/D3-js-tutorials)<br>
+D3 Data modifen met nesting() =[Klik hieroooo](http://learnjsdata.com/group_data.html)
