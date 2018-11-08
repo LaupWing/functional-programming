@@ -91,6 +91,7 @@ function objectByMapping(booklist) {
   return mapBookObject
 }
 
+// Credits naar mijn man Wouter
 function jaartalFormatObject(booklist) {
   // Stopt array find in een item zodat je makkelijker bij het object kan komen
   let array = [];

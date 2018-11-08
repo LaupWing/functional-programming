@@ -121,7 +121,7 @@ Het lastigste vond ik wel dat de database van de oba uit verschillende lagen bes
 **Wat vond ik het leukste om te doen**<br>
 De eerste 3 a 4 dagen vond ik niks leuk. Dit kwam omdat ik er qua kennis nog te weinig wist om echt te gaan beginnen. Na wat moed op te sparen en aan mensen vragen hoe sommige dingen werken begreep ik er meer van en begon ik langzamerhand coderen leuker te vinden. Wat specifieker vond ik het toepassen van de verschillende array methods interessant. Het was voor mij een kunst om te weten welke array method ik moet gebruiken voor een bepaalde probleem. Door meer te lezen op MDN en het meteen toepassen van de array methods begreep ik steeds meer van!. Het is echt fijn om nieuwe syntaxen te leren en vervolgens meteen toepassen en zien dat het daadwerkelijk werkt. Natuurlijk werkt niet altijd, maar dan is het oplossen ook weer leuk omdat je daardoor ook weer leert waarom het niet werkt.
 
-**Maar het leukste:** Maar wat ik het allerleukst vind om te doen is om andere mensen te helpen. Ik weet namelijk hoe frustrerend kan zijn om iets niet te begrijpen en dat je niet verder komt puur omdat je iets niet begrijp. Vooral op het gebied van technische vakken is het niet begrijpen een motivatie killer. Wanneer ik mensen ga helpen begrijpen ze het meer en krijgen ze ook meer hoop en dat vind ik wel fijn. Nogmaals ik ben ook iemand die dit zovaak had en heb meegemaakt. Naast dat durven mensen ook niet vaak te vragen aan andere mensen en het is gewoon jammer dat ze daardoor niet verder kunnen komen.
+**Maar het leukste:** Maar wat ik het allerleukst vind om te doen is om andere mensen te helpen. Ik weet namelijk hoe frustrerend kan zijn om iets niet te begrijpen en dat je niet verder komt puur omdat je iets niet begrijp. Vooral op het gebied van technische vakken is het niet begrijpen een motivatie killer. Wanneer ik mensen ga helpen begrijpen ze het meer en krijgen ze ook meer hoop en dat vind ik wel fijn. Nogmaals ik ben ook iemand die dit zovaak had en heb meegemaakt. Naast dat durven mensen ook niet vaak te vragen aan andere mensen en het is gewoon jammer dat ze daardoor niet verder kunnen komen. **_Studenten moeten elkaars rug hebben en elkaar helpen met coderen en motiveren!!_**
 
 
 
@@ -228,15 +228,11 @@ Deze dagen heb ik nauwelijks iets kunnen doen vanwege een griep. Ik heb wat func
 * Griep ondekt
 
 #### Day 9: Donderdag 8 november
-Laatste dag voor de beoordeling heb ik met veel stress mijn data zo opgeschoond dat het meteen bruikbaar was voor Observable. Vandaag was voor mij een hele warrige dag, omdat ik zoveel te doen had wou ik alles tegelijk doen. Ik heb vandaag beetje d3 kennis kunnen opdoen en uiteindelijk een schone dataset kunnen krijgen door gebruik van veel functie's. En vooral aan de readem gewerkt. 
+Laatste dag voor de beoordeling heb ik met veel stress mijn data zo opgeschoond dat het meteen bruikbaar was voor Observable. Vandaag was voor mij een hele warrige dag, omdat ik zoveel te doen had wou ik alles tegelijk doen. Ik heb vandaag beetje d3 kennis kunnen opdoen en uiteindelijk een schone dataset kunnen krijgen door gebruik van veel functie's. En vooral aan de readem gewerkt.
 
 **Ontdekkingen**
 * wat d3 kennis
 * het is een criteria om data te bewerken in D3... damn kwam ik net te laat achter, dan had ik minder tijd in gestoken om in mijn index.js data op te schone :sadface
-
-
-
-
 
 
 
@@ -250,4 +246,43 @@ In de chart in Observable kan je zien dat er in het begin veel variatie te vinde
 **Wouter:**
 Wouter heeft mij geholpen met vele functie's schrijven. Zonder hem zou ik nog dagenlang vastzitten met hetzelfde probleem. Hij heeft de function jaartalFormatObject geschreven voor mij en de module geschreven waardoor ik meerdere items kon laten zien dan 20 in de terminal. Naast dat heeft hij ook sommige array methods in detail uitgelegt hoe ze werken. Wat een ware held.
 
+```js
+// Credits naar mijn man Wouter
+// De obaMaanWrapperDing is ook van wouter
+function jaartalFormatObject(booklist) {
+  // Stopt array find in een item zodat je makkelijker bij het object kan komen
+  let array = [];
+  booklist.forEach(object => {
+    let item = array.find(item => item.jaartal === object.jaartal);
+    if (!item) {
+      item = {
+        jaartal: object.jaartal,
+        format: []
+      };
+      array.push(item);
+    }
+    var merged = [].concat(object.format);
+    item.format = item.format.concat(object.format);
+  });
+
+  return array
+}
+```
+
 **Joost:** Danzkij Joost kon ik de undefined errors catchen met een functie die hij heeft geschreven. Naast dat heeft hij mij ook haarfijn uitgelegt hoe de database werkte en dat er meerdere lagen waren. Hierdoor gaf hij mij meer hoop om door te gaan met coderen.
+```js
+// Credits naar mijn man Joost
+function makeBookObject(book) {
+  bookObject = {
+    // Credits aan Joost
+    title: (typeof book.titles === "undefined" || typeof book.titles.title === "undefined") ? 'Titel is onbekend' : book.titles.title.$t,
+    taal: (typeof book.languages === "undefined" || typeof book.languages.language === "undefined") ? 'Taal onbekend' : book.languages.language.$t,
+    jaartal: (typeof book.publication === "undefined" || typeof book.publication.year === "undefined") ? 'Jaar onbekend' : book.publication.year.$t,
+    // jaartal: checkJaartal(book),
+    author: (typeof book.authors === "undefined" || typeof book.authors['main-author'] === "undefined") ? "Auteur onbekend" : book.authors['main-author'].$t,
+    // format: (typeof book.formats === "undefined" || typeof book.formats.format === "undefined") ? "Formaat onbekend" : book.formats.format.$t
+    format: checkFormat(book)
+  }
+  array.push(bookObject)
+}
+```
