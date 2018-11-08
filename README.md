@@ -1,10 +1,14 @@
 # Functional Programming
 Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
+
+
 ## Inhoudsopgave
 1. [Onderzoeksvragen](#onderzoeksvragen)
 2. [Huidige Onderzoeksvraag](#huidig)
 3. [Data van Oba](#dataOba)
 4. [Proces](#proces)
+
+
 
 <a name="onderzoeksvragen"></a>
 ## Onderzoeksvragen
@@ -31,6 +35,8 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
   * CD varianten in 2013 t/m 2018
   * Afgenomen varianten per jaar vanaf 2013
 
+
+
 <a name="huidig"></a>
 ## Uiteindelijke Onderzoeksvraag:
 
@@ -51,6 +57,8 @@ De variatie in formaten(niet de afmetingen, maar fysieke formaat zoals cd, dvd e
 * De formaten optellen per jaar.
 * Jaren sorteren
 * De jaren clusteren (ervoor zorgen dat de jaren uniniek worden)
+
+
 
 <a name="dataOba"></a>
 ## Data van de oba
@@ -96,7 +104,7 @@ Omdat mijn onderzoeksvraag vooral bestaat twee factoren namelijk  jaren en varia
 In dit hoofdstuk kan je het proces zien van het project. In "Mijn proces verhaal" kan je de grote lijnen vinden van het proces in één groot verhaal. In "Dagelijkse proces" kan je het proces vinden per dag beschreven en in meer detail en meer technische details.
 
 ### Mijn proces verhaal
-Net zoals alle andere technische vakken dat ik op de opleiding CMD heb gehad was dat er in het begin heel veel frustratie was. Ik begreep praktische niks, maar door middel van veel vragen aan medestudenten werd ik steeds wijzer tot het punt dat ik andere mensen kon helpen. Persoonlijk vind ik het jammer dat ik in het begin vaak naar mensen moet afstappen om voor hulp te vragen. Daarom vraag ik actief naar mensen of ze mij hulp nodig hebben, omdat ik weet hoe naar het kan zijn om niet verder te gaan vanwege gebrek aan kennis. Na het opdoen van veel kennis had ik meer vertrouwen om het zelf te doen en begon ik zelf functie's te schrijven en zelf ook errors op te lossen. Mijn waardevolste ontdekking is dat ik zoveel moet console.loggen om erachter te komen waar mijn code foutgaat. Uiteindelijk is het mijn na veel errors en syntaxen uitproberen is het mij gelukt om schone data te krijgen met een object met daarin de property's jaartal en variatie(de variatie in presentatie van content zoals boek, cd etc) 
+Net zoals alle andere technische vakken dat ik op de opleiding CMD heb gehad was dat er in het begin heel veel frustratie was. Ik begreep praktische niks, maar door middel van veel vragen aan medestudenten werd ik steeds wijzer tot het punt dat ik andere mensen kon helpen. Persoonlijk vind ik het jammer dat ik in het begin vaak naar mensen moet afstappen om voor hulp te vragen. Daarom vraag ik actief naar mensen of ze mij hulp nodig hebben, omdat ik weet hoe naar het kan zijn om niet verder te gaan vanwege gebrek aan kennis. Na het opdoen van veel kennis had ik meer vertrouwen om het zelf te doen en begon ik zelf functie's te schrijven en zelf ook errors op te lossen. Mijn waardevolste ontdekking is dat ik zoveel moet console.loggen om erachter te komen waar mijn code foutgaat. Uiteindelijk is het mijn na veel errors en syntaxen uitproberen is het mij gelukt om schone data te krijgen met een object met daarin de property's jaartal en variatie(de variatie in presentatie van content zoals boek, cd etc)
 
 **Waar had ik het meest moeite mee**<br>
 Het lastigste vond ik wel dat de database van de oba uit verschillende lagen bestaat. Het was heel lastig voor mij om te ontdekken hoe ik door de verschillende lagen kan gaan om de echte uiteindelijke data te krijgen. Sommige data hadden zelfs nog een array in verwerkt.
@@ -105,6 +113,8 @@ Het lastigste vond ik wel dat de database van de oba uit verschillende lagen bes
 De eerste 3 a 4 dagen vond ik niks leuk. Dit kwam omdat ik er qua kennis nog te weinig wist om echt te gaan beginnen. Na wat moed op te sparen en aan mensen vragen hoe sommige dingen werken begreep ik er meer van en begon ik langzamerhand coderen leuker te vinden. Wat specifieker vond ik het toepassen van de verschillende array methods interessant. Het was voor mij een kunst om te weten welke array method ik moet gebruiken voor een bepaalde probleem. Door meer te lezen op MDN en het meteen toepassen van de array methods begreep ik steeds meer van!. Het is echt fijn om nieuwe syntaxen te leren en vervolgens meteen toepassen en zien dat het daadwerkelijk werkt. Natuurlijk werkt niet altijd, maar dan is het oplossen ook weer leuk omdat je daardoor ook weer leert waarom het niet werkt.
 
 **Maar het leukste:** Maar wat ik het allerleukst vind om te doen is om andere mensen te helpen. Ik weet namelijk hoe frustrerend kan zijn om iets niet te begrijpen en dat je niet verder komt puur omdat je iets niet begrijp. Vooral op het gebied van technische vakken is het niet begrijpen een motivatie killer. Wanneer ik mensen ga helpen begrijpen ze het meer en krijgen ze ook meer hoop en dat vind ik wel fijn. Nogmaals ik ben ook iemand die dit zovaak had en heb meegemaakt. Naast dat durven mensen ook niet vaak te vragen aan andere mensen en het is gewoon jammer dat ze daardoor niet verder kunnen komen.
+
+
 
 
 ### Dagelijkse proces
