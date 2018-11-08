@@ -16,7 +16,7 @@ client.get('search', {
     sort: 'title',
     refine: true,
     librarian: true,
-    count: 100,
+    count: 1000,
     log: true
   })
   .then(results => {
@@ -35,15 +35,21 @@ client.get('search', {
     let uniqueFormat = objectUniqueFormats(jaartalObject);
     let sorteerJaar  = uniqueFormat.sort(sorteerOpjaar);
     let aantalFormaat = aantalFormaten(sorteerJaar);
+    // processLog(aantalFormaat)
     console.log(aantalFormaat)
-    console.log(testArray)
+    // console.log(testArray)
 
-    fs.writeFile('log.json', JSON.stringify(jaartalObject), 'utf8', function() {})
+    fs.writeFile('log.json', JSON.stringify(aantalFormaat), 'utf8', function() {})
   })
   .catch(err => console.log(err))
 let array = [];
 let testArray = [];
 
+// function processLog(booklist){
+//   booklist.forEach(function(book){
+//     fs.writeFile('log.json', JSON.stringify(book), 'utf8', function() {})
+//   })
+// }
 
 
 
@@ -65,7 +71,6 @@ function makeBookObject(book) {
 // Dit returned alle titles van de boeken en stopt ze in een object met als
 // property titel
 function objectByMapping(booklist) {
-  console.log(Array.prototype.filter, Array.prototype.flat)
   let mapBookObject = {
     title: booklist.map(function(book) {
       if (book.title) {
