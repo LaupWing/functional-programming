@@ -1,3 +1,6 @@
+// Wat kan beter?????
+// Benaming van variables is eigenlijk shit, zelfs ik weet af en toe niet wat sommige variabelen inhoudne
+// Functies worden onnodig aangemaakt(Sommige functies zijn eigenlijk overbodig, waardoor de code een stuk korter word)
 const OBA = require('./modules/obaMaanWrapperDing');
 const fs = require('fs');
 require('dotenv').config()
