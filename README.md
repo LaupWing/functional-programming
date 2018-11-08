@@ -292,4 +292,5 @@ function makeBookObject(book) {
 ## Bronnenlijst
 Array Methods Syntaxes = [Klik hieroooo](https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Global_Objects/Array)<br>
 D3 Tutorial = [Klik hieroooo](https://www.lynda.com/D3-js-tutorials)<br>
-D3 Data modifen met nesting() =[Klik hieroooo](http://learnjsdata.com/group_data.html)
+D3 Data modifen met nesting() =[Klik hieroooo](http://learnjsdata.com/group_data.html)<br>
+Zijn er sowieso meer dan 3 maar ben te lui op dit moment om ze allemaal in te lijsten!
