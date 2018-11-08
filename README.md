@@ -233,7 +233,7 @@ Laatste dag voor de beoordeling heb ik met veel stress mijn data zo opgeschoond 
 
 **Ontdekkingen**
 * wat d3 kennis
-* het is een criteria om data te bewerken in D3... damn kwam ik net te laat achter, dan had ik minder tijd in gestoken om in mijn index.js data op te schone :sadface
+* er staat in de criteria dat je data moet bewerken in D3... damn kwam ik net te laat achter, dan had ik minder tijd in gestoken om in mijn index.js data op te schone :sadface
 
 
 
