@@ -1,5 +1,5 @@
 # Functional Programming
-Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api. De datavisualisatie moet gemaakt worden door de D3 package of via Observable. 
+Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api. De datavisualisatie moet gemaakt worden door de D3 package of via Observable.
 
 
 ## Inhoudsopgave
@@ -221,10 +221,29 @@ function checkFormat(book) {
 * Het is mogelijk om een function aan een object property te hangen.
 * In een if-stament kan je nog een if-statment zetten om te kijken naar de verschillende lagen.
 
+#### Day 7 & Day 8: Dinsdag 6 november 2018, Woensdag 7 november
+Deze dagen heb ik nauwelijks iets kunnen doen vanwege een griep. Ik heb wat functie's geschreven om ervoor te zorgen dat de data gefilterd word en voor de rest heb ik mijn readme ge update
+
+**Ontdekkingen**
+* Griep ondekt
+
+#### Day 9: Donderdag 8 november
+Laatste dag voor de beoordeling heb ik met veel stress mijn data zo opgeschoond dat het meteen bruikbaar was voor Observable. Vandaag was voor mij een hele warrige dag, omdat ik zoveel te doen had wou ik alles tegelijk doen. Ik heb vandaag beetje d3 kennis kunnen opdoen en uiteindelijk een schone dataset kunnen krijgen door gebruik van veel functie's. En vooral aan de readem gewerkt. 
+
+**Ontdekkingen**
+* wat d3 kennis
+* het is een criteria om data te bewerken in D3... damn kwam ik net te laat achter, dan had ik minder tijd in gestoken om in mijn index.js data op te schone :sadface
+
+
+
+
+
+
+
 <a name="resultaat"></a>
 ## Resultaat/Conclusie (Observable)
 Observable Linkje = [Klik hieroooo](https://beta.observablehq.com/@laupwing/d3-bar-chart)<br>
-In de chart in Observable kan je zien dat er in het begin veel variatie te vinden en dat steeds weer afneemt. Op het eind van de diagram kan je ook weer zien dat het juist weer toeneemt. Dit bewijst het tegendeel van mijn hypothese dat het geleidelijk afneemt.
+In de chart in Observable kan je zien dat er in het begin veel variatie te vinden en dat steeds weer afneemt. Op het eind van de diagram kan je ook weer zien dat het juist weer toeneemt. Dit bewijst het tegendeel van mijn hypothese dat het geleidelijk afneemt. Maar dit is verreweg een echte conclusie, omdat dit het resultaat is van maar slechts 1000 boeken op de letter h gezocht. Om de onderzoeksvraag goed te kunnen beantwoorden dien ik meer resultaten te hebben en zonder te filteren op een zoekterm.
 
 <a name="honerable"></a>
 ## Honerable Mentions
