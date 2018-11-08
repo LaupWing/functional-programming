@@ -86,7 +86,7 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
 
 <a name="proces"></a>
 ## Schetsen
-![alt text](/Images/BarDiagram)
+![alt text](https://github.com/LaupWing/functional-programming/blob/master/Images/BarDiagram.jpg)
 
 
 ## Het Proces
