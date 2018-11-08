@@ -3,6 +3,8 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api.
 ## Inhoudsopgave
 1. [Onderzoeksvragen](#onderzoeksvragen)
 2. [Huidige Onderzoeksvraag](#huidig)
+3. [Data van Oba](#dataOba)
+4. [Proces](#proces)
 
 <a name="onderzoeksvragen"></a>
 ## Onderzoeksvragen
@@ -50,6 +52,7 @@ De variatie in formaten(niet de afmetingen, maar fysieke formaat zoals cd, dvd e
 * Jaren sorteren
 * De jaren clusteren (ervoor zorgen dat de jaren uniniek worden)
 
+<a name="dataOba"></a>
 ## Data van de oba
 Hieronder zie je de oba api structuur van title en author van een boek. Maar het structuur is min of meer overal hetzelfde.
 ```
@@ -81,23 +84,37 @@ Hieronder zie je de oba api structuur van title en author van een boek. Maar het
 
 **Structuur:** Hierboven is een kleine stukje van de oba api beschreven. De code hierboven bestaat alleen maar uit de autor en de titel van een bepaalde boek, maar laat wel het algemene strucuur zien van de api. Elk categorie van een boek heeft meerdere lagen. Om bijvoorbeeld bij de titel te komen van een boek, moet je eerst naar titles > title > $t. Dus het de title van een boek kan je pas vinden in de $t property van het object.
 
+<a name="proces"></a>
 ## Het Proces
-In dit hoofdstuk kan je het proces zien van het project. Hierin worden vooral de technische vooruitgang beschreven. Wat ik geleerd heb staat dan per dag beschreven.
+In dit hoofdstuk kan je het proces zien van het project. In "Mijn proces verhaal" kan je de grote lijnen vinden van het proces in één groot verhaal. In "Dagelijkse proces" kan je het proces vinden per dag beschreven en in meer detail en meer technische details.
 
-### Day 1: Dinsdag 29 oktober 2018
+### Mijn proces verhaal
+Net zoals alle andere technische vakken dat ik op de opleiding CMD heb gehad was dat in het begin heel veel frustratie was. Ik begreep praktische niks maar door middel van veel vragen aan medestudenten werd ik steeds wijzer tot het punt dat ik andere mensen kon helpen. Persoonlijk vind ik het jammer dat ik in het begin vaak naar mensen moet afstappen om voor hulp te vragen. Daarom vraag ik actief naar mensen of ze mij hulp nodig hebben, omdat ik weet hoe naar het kan zijn om niet verder te gaan vanwege gebrek aan kennis.
+
+**Waar had ik het meest moeite mee**<br>
+Het lastigste vond ik wel dat de database van de oba uit verschillende lagen bestaat. Het was heel lastig voor mij om te ontdekken hoe ik door de verschillende lagen kan gaan om de echte uiteindelijke data te krijgen. Sommige data hadden zelfs nog een array in verwerkt.
+
+**Wat vond ik het leukste om te doen**<br>
+De eerste 3 a 4 dagen vond ik niks leuk, omdat het veelste
+
+
+### Dagelijkse proces
+Hieronder kan je het dagelijkse proces vinden. Per dag beschrijf ik wat ik geleerd heb en waar ik tegen aanliep er word ook een opsomming gemaakt van de dingen dat ik(vaak samen met ander studenten) heb ondekt
+
+#### Day 1: Dinsdag 29 oktober 2018
 In dag 1 heb ik de documentatie van de aquabrowser gelezen. Naast dat heb ik niet veel kunnen bereiken behalve de api draained kunnen krijgen op mijn terminial.
 
 **Ontdekkingen**
 * node index.js om de script te runnen via node
 
-### Day 2: Dinsdag 30 oktober 2018
+#### Day 2: Dinsdag 30 oktober 2018
 **Ontdekkingen**
 * De database werkt in lagen in lagen dus als je bij een titel wilt komen moet je naar titles > title gaan en vervolgens
 nog $t om de daadwerkelijke titel te vinden.
 * Door middel van facet etc. kan ik voordat er uberhaupt gezocht word al gaan filteren door de database.
 
 
-### Day 3: Woensdag 31 oktober 2018
+#### Day 3: Woensdag 31 oktober 2018
 Dankzij Joost kon ik de undefined error catchen door middel van if statement. Want bij een undefined categorie kregen we steeds
 een error waardoor het helemaal niet meer werkte. Het probleem was dat sommige resultaten bepaalde categoriën niet hadden waardoor het
 een error gaf en daardoor werkte alles niet meer.
@@ -117,7 +134,7 @@ een error gaf en daardoor werkte alles niet meer.
 * Typeof is een methods om de type van een variabele te bekijken
 
 
-### Day 4: Donderdag 1 november 2018
+#### Day 4: Donderdag 1 november 2018
 Vandaag heb ik de functions aangemaakt om bepaalde resultaten te krijgen op basis van bepaalde conditie's.
 ```js
 let fromYear = filterByYear(array);
@@ -135,13 +152,13 @@ function filterByYear(booklist) {
 * Een variabele kan een function bevatten
 * Als er een function in de variable zit is hetgeen wat de function returned wat in de variable zich bevind. Als de function een array terugstuurd zit er in de variabele een array
 
-### Day 5: Vrijdag 2 november 2018
+#### Day 5: Vrijdag 2 november 2018
 Tijdens het testen naar een andere zoekterm liet mijn terminal alweer een undefined errror zien. Na lang zoeken waar het probleem lag kwam ik erachter dat sommige formats van boeken meerder formats beschikken die in een array zitten. Maar tegen de tijd dat ik dit gevonden had was het al tijd om naar huis te gaan
 
 **Ontdekkingen**
 * Sommige categoriën hebbenn meerdere waardes die weer in een array zitten
 
-### Day 6: Maandag 5 november 2018
+#### Day 6: Maandag 5 november 2018
 Na de ontdekking van afgelopen vrijdag probeerde ik op maandag 5 november dit probleem op te lossen. Dit heb ik gedaan door aan de object property format een function aan te koppelen die meerdere if statements heeft om de array te laten zien.
 ```js
 function makeBookObject(book) {
@@ -178,5 +195,6 @@ function checkFormat(book) {
 
 # Honerable Mentions
 **Wouter:**
-Wouter heeft mij geholpen met vele functie's schrijven. Zonder hem zou ik nog dagenlang vastzitten met hetzelfde probleem. Hij heeft de function jaartalFormatObject geschreven voor mij en de module geschreven waardoor ik meerdere items kon laten zien dan 20 in de terminal. Naast dat heeft hij ook sommige array methods in detail uitgelegt hoe ze werken. Wat een ware held.<br>
+Wouter heeft mij geholpen met vele functie's schrijven. Zonder hem zou ik nog dagenlang vastzitten met hetzelfde probleem. Hij heeft de function jaartalFormatObject geschreven voor mij en de module geschreven waardoor ik meerdere items kon laten zien dan 20 in de terminal. Naast dat heeft hij ook sommige array methods in detail uitgelegt hoe ze werken. Wat een ware held.
+
 **Joost:** Danzkij Joost kon ik de undefined errors catchen met een functie die hij heeft geschreven. Naast dat heeft hij mij ook haarfijn uitgelegt hoe de database werkte en dat er meerdere lagen waren. Hierdoor gaf hij mij meer hoop om door te gaan met coderen.
