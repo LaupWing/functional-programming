@@ -23,10 +23,10 @@ d3.json('log.json').then(function(data) {
 
 const svg = d3.select("body").append("svg")
 const margin = {
-  top: 25,
+  top: 15,
   right: 25,
   bottom: 25,
-  left: 20
+  left: 10
 }
 const chart = svg
                   .append("g")
@@ -34,13 +34,17 @@ const chart = svg
                   .style("transform", `translate(${margin.left}%,${margin.top}%)`);
 
 
-let width = 600;
-let height = 300;
+
+let width = window.innerWidth*0.65;
+let height = window.innerHeight*0.42;
+
+function testfuction(){
+  console.log(" test")
+}
 
 
 
-
-function createGraph(data, lineStyle, addAxes){
+function createGraph(data, lineStyle, add){
   let lineClass = function(){
     if(lineStyle === d3.curveLinear){
       return "linear"
@@ -77,7 +81,7 @@ function createGraph(data, lineStyle, addAxes){
        .attr("d", line(data))
        .attr("fill", "none")
        .attr("stroke","black");
-  if(addAxes === true){
+  if(add === true){ // dit zorgt ervoor dat de axes en circles maar eenmalig worden toegevoegd
     chart
          .append("g")
          .attr("class", "axis y")
