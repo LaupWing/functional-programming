@@ -1,0 +1,31 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+svg{
+  background: orange;
+  width: 80vw;
+  height: 60vh;
+}
+g.tick line{
+  stroke: purple;
+  stroke-width: 2px;
+}
+#chart circle{
+  fill: orange;
+  stroke: purple;
+  transition: .2s;
+}
+#chart circle:hover{
+  r: 10;
+  fill: white;
+}
+form{
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}

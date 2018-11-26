@@ -40,7 +40,7 @@ client.get('search', {
     let aantalFormaat = aantalFormaten(sorteerJaar);
     // processLog(aantalFormaat)
     console.log(aantalFormaat)
-    // console.log(testArray)
+    console.log(bookObject)
 
     fs.writeFile('log.json', JSON.stringify(aantalFormaat), 'utf8', function() {})
   })
