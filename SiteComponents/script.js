@@ -1,7 +1,7 @@
 d3.json('log.json').then(function(data) {
     window.data = data // Data in log bestand word opgeslagen in window data property
     createGraph(data, d3.curveLinear, true)
-    d3.selectAll("input").on("change", drawGraph)
+    d3.selectAll(".lines").on("change", drawGraph)
     function drawGraph(){
       if(d3.select(this).property("checked")){
         createGraph(data, checkValueAdd(this), false)
@@ -14,7 +14,7 @@ d3.json('log.json').then(function(data) {
         return d3.curveStep
       }else if(d.value == "linear"){
         return d3.curveLinear
-      }else{
+      }else if(d.value == "cardinal"){
         return d3.curveCardinal
       }
     }
@@ -37,10 +37,6 @@ const chart = svg
 
 let width = window.innerWidth*0.65;
 let height = window.innerHeight*0.42;
-
-function testfuction(){
-  console.log(" test")
-}
 
 
 
@@ -98,6 +94,7 @@ function createGraph(data, lineStyle, add){
                  .attr("cx", function(d,i){return x(parseDate(d.jaartal))})
                  .attr("cy", function(d,i){return y(d.variatie)})
                  .attr("r", "6")
+                 .on("mouseover", (d)=>{console.log(d)})
   }
 
 

@@ -7,28 +7,37 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>D3 Diagrams</title>
   <script src="https://d3js.org/d3.v5.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <p>Custom range slider:</p>
-  <input type="range" min="1" max="10" value="2" class="slider" id="myRange">
+  <header>
+    <button class="close header">sluiten</button>
+    <h1>De verschillende formaten in de OBA</h1>
+    <p>Met formaten bedoel ik de verschillendende varianten van een verhaal. Je kan hierbij denken aan cd-rom, e-boeken, etc. Per jaar worden de gekeken hoeveel verschillende formaten er beschikbaar zijn.</p>
+    <p>Je kan op de verschillende checkboxjes klikken om een niewe lijn te genereren in een nieuwe stijl. Door de checkboxjes uit te vinken word er een lijn verwijderd. Door op het knopje sort te klikken word er een lijn getrokken van de jaren met de meeste formaten naar de jaren met het minste formaten.</p>
+  </header>
+  <button id="open">Sort</button>
+  <!-- <div id="overlay">
+    <button id="close"></button>
+  </div> -->
   <form action="">
     <div>
       <label>
-        <input type="checkbox" id="linear" value="linear" checked>
+        <input type="checkbox" class="lines" value="linear" checked>
         Default line
       </label>
     </div>
     <div>
       <label>
-       <input type="checkbox" id="cardinal" value="cardinal">
+       <input type="checkbox" class="lines" value="cardinal">
        Cardinal Line
      </label>
     </div>
     <div>
       <label>
-        <input type="checkbox" id="step" value="step">
+        <input type="checkbox" class="lines" value="step">
         Step Line
       </label>
     </div>
