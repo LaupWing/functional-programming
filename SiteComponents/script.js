@@ -1,10 +1,10 @@
 d3.json('log.json').then(function(data) {
     window.data = data // Data in log bestand word opgeslagen in window data property
-    createLine(data, d3.curveLinear)
+    createGraph(data, d3.curveLinear, true)
     d3.selectAll("input").on("change", drawGraph)
     function drawGraph(){
       if(d3.select(this).property("checked")){
-        createLine(data, checkValueAdd(this))
+        createGraph(data, checkValueAdd(this), false)
       }else{
         d3.select(`.${this.value}`).remove()
       }
@@ -37,12 +37,10 @@ const chart = svg
 let width = 600;
 let height = 300;
 
-function createAxis(d){
-  
-}
 
 
-function createLine(data, lineStyle){
+
+function createGraph(data, lineStyle, addAxes){
   let lineClass = function(){
     if(lineStyle === d3.curveLinear){
       return "linear"
@@ -79,22 +77,24 @@ function createLine(data, lineStyle){
        .attr("d", line(data))
        .attr("fill", "none")
        .attr("stroke","black");
-  chart
-       .append("g")
-       .attr("class", "axis y")
-       .call(yAxis);
-  chart
-       .append("g")
-       .attr("class", "axis x")
-       .attr("transform", `translate(0,${height})`)
-       .call(xAxis);
-  chart
-       .selectAll("circle")
-       .data(data)
-       .enter().append("circle")
-               .attr("cx", function(d,i){return x(parseDate(d.jaartal))})
-               .attr("cy", function(d,i){return y(d.variatie)})
-               .attr("r", "6")
+  if(addAxes === true){
+    chart
+         .append("g")
+         .attr("class", "axis y")
+         .call(yAxis);
+    chart
+         .append("g")
+         .attr("class", "axis x")
+         .attr("transform", `translate(0,${height})`)
+         .call(xAxis);
+    chart
+         .selectAll("circle")
+         .data(data)
+         .enter().append("circle")
+                 .attr("cx", function(d,i){return x(parseDate(d.jaartal))})
+                 .attr("cy", function(d,i){return y(d.variatie)})
+                 .attr("r", "6")
+  }
 
 
 }
