@@ -59,8 +59,8 @@ return data.sort((x,y)=> d3.descending(x.variatie, y.variatie))
 ```
 Code hierboven bevind zich in de events.js file. In de events.js file word er geluisterd naar een klik event en zodra er klik event gestart word dan word de createGraph function gestart(functie bevind zich in de script.js file). Als parameter word de function sortFunction met daarin data gegeven, waardoor de gesorteerde versie van de data word gestuurd naar de createGraph function.
 
-
 <br>
+
 **_Responsive en resize._**
 ```js
 // script.js
