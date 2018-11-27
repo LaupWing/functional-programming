@@ -48,6 +48,8 @@ De files
 
 **Uitleg code**
 
+<br>
+
 **_Data bewerken met d3._**
 ```js
 // events.js
@@ -80,8 +82,8 @@ In mijn script.js file word er alleen maar window.innerWidth en window.innerHeig
 In mijn event.js heb ik een event listener die luistert naar een resize van de window. Als dat zo is word er 1 seconden de pagina gereload. Hierdoor veranderd de chart grootte en past het precies in het scherm zelfs als je het resized.
 NOTE: Ik weet dat dit een goedkope oplossing is om de chart mee te laten gaan als je de browser resize, maar tijd is schaars!!!!
 
-
 <br>
+
 **_animatie en verschillende representatie's van de data._**
 
 In de webapp kan je kiezen tussen veschillende stylen line charts. Dit word gedaan door middel van de checkboxjes boven de chart.
