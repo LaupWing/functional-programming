@@ -46,7 +46,7 @@ De files
 
 :page_facing_up:**events.js:** Hier worden alle javascript event functions opgeslagen
 
-**_Uitleg code_**
+**Uitleg code**
 
 Data bewerken met d3.
 ```js
