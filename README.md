@@ -79,6 +79,7 @@ In mijn event.js heb ik een event listener die luistert naar een resize van de w
 NOTE: Ik weet dat dit een goedkope oplossing is om de chart mee te laten gaan als je de browser resize, maar tijd is schaars!!!!
 
 **_animatie en verschillende representatie's van de data._**
+
 In de webapp kan je kiezen tussen veschillende stylen line charts. Dit word gedaan door middel van de checkboxjes boven de chart.
 ```js
 // script.js
@@ -106,7 +107,7 @@ function checkValueAdd(d){
  Bij het aanroepen van de createGraph function dien je 3 parameters mee tegeven. 1 is de data, 2e is de style van de line en derde is of ook de axis en circles en labels bij moeten door true of false mee te geven.
 
  Bij het starten van een change event word de drawGraph function gestart. In de draw graph function word er eerst gekeken of de checkbox gechecked staat. zo ja dan word de createGraph function gestart met als parameter data, en de function checkValueAdd. In deze function word er gekeken wat de value is van de checkbox en geeft aan de hand van de value het juiste lijn stijl mee als parameter voor de createGraph. Als checkbox niet gechecked staat word de class met de value verwijderd. Class heeft namelijke exact hetzelfde waarde als value van de checkbox daarom is dit mogelijk.
- 
+
 #### Onleesbare readme
 
 Readme heb ik wat ruimtes gecreeërd voor overzichtelijkeheid. Verschillende headings toegevoegd.
