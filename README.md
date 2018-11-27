@@ -58,6 +58,8 @@ return data.sort((x,y)=> d3.descending(x.variatie, y.variatie))
 }
 ```
 Code hierboven bevind zich in de events.js file. In de events.js file word er geluisterd naar een klik event en zodra er klik event gestart word dan word de createGraph function gestart(functie bevind zich in de script.js file). Als parameter word de function sortFunction met daarin data gegeven, waardoor de gesorteerde versie van de data word gestuurd naar de createGraph function.
+
+
 <br>
 **_Responsive en resize._**
 ```js
@@ -77,6 +79,8 @@ In mijn script.js file word er alleen maar window.innerWidth en window.innerHeig
 
 In mijn event.js heb ik een event listener die luistert naar een resize van de window. Als dat zo is word er 1 seconden de pagina gereload. Hierdoor veranderd de chart grootte en past het precies in het scherm zelfs als je het resized.
 NOTE: Ik weet dat dit een goedkope oplossing is om de chart mee te laten gaan als je de browser resize, maar tijd is schaars!!!!
+
+
 <br>
 **_animatie en verschillende representatie's van de data._**
 
