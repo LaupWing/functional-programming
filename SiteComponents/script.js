@@ -94,7 +94,21 @@ function createGraph(data, lineStyle, add){
                  .attr("cx", function(d,i){return x(parseDate(d.jaartal))})
                  .attr("cy", function(d,i){return y(d.variatie)})
                  .attr("r", "6")
-                 .on("mouseover", (d)=>{console.log(d)})
+                 .on("mouseover", (d)=>{
+                   svg.append("text")
+                      .attr("class", "info")
+                      .text(`Jaartal: ${d.jaartal}, variatie's formaten: ${d.jaartal}`)
+                      // .attr("transform", `translate(${window.innerWidth * 0.30}, ${window.innerHeight * 0.595})`)
+                 })
+                 .on("mouseout", (d)=>{d3.selectAll(".info").remove()})
+      chart
+           .append("text")
+           .text("Variatie's")
+           .attr("class", "label variatie")
+      chart
+           .append("text")
+           .text("Jaartal")
+           .attr("class", "label jaartal")
   }
 
 

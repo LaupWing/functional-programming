@@ -69,10 +69,10 @@ input[type=checkbox]{
   border-radius: 20px;
   transition: .2s;
 }
-#open{
-  margin-bottom: 20px;
+#open, #close{
   background: white;
   border: none;
+  margin-bottom: 10px;
   outline: none;
   padding: 10px 20px;
   border-radius: 30px;
@@ -81,7 +81,7 @@ input[type=checkbox]{
   text-transform: uppercase;
   cursor: pointer;
 }
-#open:hover{
+#open:hover, #close:hover{
   background: rgba(0,0,0,0.2);
 }
 .close{
@@ -101,4 +101,22 @@ input[type=checkbox]{
 .close:hover{
   background: white;
   color: black;
+}
+.sortBtns{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info{
+  transform: translate(38%,95%);
+  fill: orange;
+}
+.label.jaartal{
+  transform:  translate(10%,78%);
+  font-weight: 600;
+}
+.label.variatie{
+  transform:  translate(-3%,50%) rotate(-90deg);
+  font-weight: 600;
 }
