@@ -3,6 +3,7 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api. D
 
 
 ## Inhoudsopgave
+0. [Herkansing](#herkansing)
 1. [Onderzoeksvragen](#onderzoeksvragen)
 2. [Huidige Onderzoeksvraag](#huidig)
 3. [Data van Oba](#dataOba)
@@ -13,6 +14,107 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api. D
 8. [Bronnelijst](#bronnenlijst)
 
 
+<a name="herkansing"></a>
+## Herkansing
+
+### Feedback
+#### Spaghetti code
+
+Mijn index.js heb ik vrijwel niks aan gedaan. Ik ben bang dat als ik het ga herschrijven dat niks het meer doet. Ik heb wel pogingen gewaagd om het wat netter te maken maar ik heb de code in de index.js file vrijwel onveranderd gelaten.
+
+#### Niks of nauwelijks iets veranderd aan Observable chart
+
+Ik heb nu mijn eigen chart gemaakt vanaf een scratch ipv een voorbeeld gepakt in Observable. Link van mijn chart kan je hierboven vinden. In mijn eigen chart heb ik de data kunnen bewerken met d3, een responsive chart, animatie en verschillende representatie's van de data.
+
+**_Uitleg files_**
+
+De files
+
+:page_facing_up:**index.js:** Hier word de data opgehaald van de oba api en gefilterd vervolgens opgeslagen in log.json
+
+:page_facing_up:**server.js:** Javascript om de website op een localhost te laten draaien, zodat ik fs kan gebruiken
+
+:file_folder: **SiteComponents:** Hier kan je alle js, html, css en json files vinden. Vooral de frontend files
+
+:page_facing_up:**log.json:** Hier worden de resultaen in opgeslagen uit de data.js bestand
+
+:page_facing_up:**index.html:** Webpagina zelf
+
+:page_facing_up:**style.css:** Css voor alle elementen op de webpagina
+
+:page_facing_up:**script.js:** Javascript vooral om chart aan te maken op d3. Hierin bevat ook enkele events.
+
+:page_facing_up:**events.js:** Hier worden alle javascript event functions opgeslagen
+
+**_Uitleg code_**
+
+Data bewerken met d3.
+```js
+// events.js
+createGraph(sortFunction(data), d3.curveLinear, true)
+
+function sortFunction(data){
+return data.sort((x,y)=> d3.descending(x.variatie, y.variatie))
+}
+```
+Code hierboven bevind zich in de events.js file. In de events.js file word er geluisterd naar een klik event en zodra er klik event gestart word dan word de createGraph function gestart(functie bevind zich in de script.js file). Als parameter word de function sortFunction met daarin data gegeven, waardoor de gesorteerde versie van de data word gestuurd naar de createGraph function.
+
+Responsive en resize.
+```js
+// script.js
+let width = window.innerWidth*0.65;
+let height = window.innerHeight*0.42;
+
+// events.js
+window.addEventListener("resize", ()=>{
+  setTimeout(()=>{
+    location.reload();
+  },1000)
+})
+}
+```
+In mijn script.js file word er alleen maar window.innerWidth en window.innerHeight gebruikt om de elementen correct te plaatsen op de webpagina. Dit zorgt ervoor dat de chart met de schermgrootte meegaat.
+
+In mijn event.js heb ik een event listener die luistert naar een resize van de window. Als dat zo is word er 1 seconden de pagina gereload. Hierdoor veranderd de chart grootte en past het precies in het scherm zelfs als je het resized.
+NOTE: Ik weet dat dit een goedkope oplossing is om de chart mee te laten gaan als je de browser resize, maar tijd is schaars!!!!
+
+**_animatie en verschillende representatie's van de data._**
+In de webapp kan je kiezen tussen veschillende stylen line charts. Dit word gedaan door middel van de checkboxjes boven de chart.
+```js
+// script.js
+createGraph(data, d3.curveLinear, true)
+
+d3.selectAll(".lines").on("change", drawGraph)
+function drawGraph(){
+  if(d3.select(this).property("checked")){
+    createGraph(data, checkValueAdd(this), false)
+  }else{
+    d3.select(`.${this.value}`).remove()
+  }
+}
+function checkValueAdd(d){
+  if(d.value == "step"){
+    return d3.curveStep
+  }else if(d.value == "linear"){
+    return d3.curveLinear
+  }else if(d.value == "cardinal"){
+    return d3.curveCardinal
+  }
+}
+
+```
+ Bij het aanroepen van de createGraph function dien je 3 parameters mee tegeven. 1 is de data, 2e is de style van de line en derde is of ook de axis en circles en labels bij moeten door true of false mee te geven.
+
+ Bij het starten van een change event word de drawGraph function gestart. In de draw graph function word er eerst gekeken of de checkbox gechecked staat. zo ja dan word de createGraph function gestart met als parameter data, en de function checkValueAdd. In deze function word er gekeken wat de value is van de checkbox en geeft aan de hand van de value het juiste lijn stijl mee als parameter voor de createGraph. Als checkbox niet gechecked staat word de class met de value verwijderd. Class heeft namelijke exact hetzelfde waarde als value van de checkbox daarom is dit mogelijk.
+ 
+#### Onleesbare readme
+
+Readme heb ik wat ruimtes gecreeërd voor overzichtelijkeheid. Verschillende headings toegevoegd.
+
+
+
+
+<br>
 
 <a name="onderzoeksvragen"></a>
 ## Onderzoeksvragen
@@ -39,6 +141,7 @@ Tijdens dit vak gaan we een datavisualisatie maken van de data van de oba api. D
   * CD varianten in 2013 t/m 2018
   * Afgenomen varianten per jaar vanaf 2013
 
+<br>
 
 
 <a name="huidig"></a>
@@ -66,6 +169,7 @@ De variatie is langzamerhand steeds minder geworden, omdat cd formaten tegenwoor
 * Jaren sorteren
 * De jaren clusteren (ervoor zorgen dat de jaren uniniek worden)
 
+<br>
 
 
 <a name="dataOba"></a>
