@@ -24,7 +24,7 @@ Mijn index.js heb ik vrijwel niks aan gedaan. Ik ben bang dat als ik het ga hers
 
 #### Niks of nauwelijks iets veranderd aan Observable chart
 
-Ik heb nu mijn eigen chart gemaakt vanaf een scratch ipv een voorbeeld gepakt in Observable. Link van mijn chart kan je hierboven vinden. In mijn eigen chart heb ik de data kunnen bewerken met d3, een responsive chart, animatie en verschillende representatie's van de data.
+Ik heb nu mijn eigen chart gemaakt vanaf een scratch ipv een voorbeeld gepakt in Observable. Link van mijn chart kan je hierboven vinden. In mijn eigen chart heb ik de data kunnen bewerken met d3, een responsive chart, animatie en verschillende representatie's van de data. Link chart https://ecstatic-knuth-4ec719.netlify.com/
 
 <br>
 
