@@ -28,9 +28,9 @@ Ik heb nu mijn eigen chart gemaakt vanaf een scratch ipv een voorbeeld gepakt in
 
 <br>
 
-**_Uitleg files_**
+#### Uitleg Files
 
-De files
+**De files**
 
 :page_facing_up:**index.js:** Hier word de data opgehaald van de oba api en gefilterd vervolgens opgeslagen in log.json
 
@@ -50,7 +50,7 @@ De files
 
 <br>
 
-**Uitleg code**
+#### Uitleg code
 
 <br>
 
