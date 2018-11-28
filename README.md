@@ -26,6 +26,8 @@ Mijn index.js heb ik vrijwel niks aan gedaan. Ik ben bang dat als ik het ga hers
 
 Ik heb nu mijn eigen chart gemaakt vanaf een scratch ipv een voorbeeld gepakt in Observable. Link van mijn chart kan je hierboven vinden. In mijn eigen chart heb ik de data kunnen bewerken met d3, een responsive chart, animatie en verschillende representatie's van de data.
 
+<br>
+
 **_Uitleg files_**
 
 De files
@@ -45,6 +47,8 @@ De files
 :page_facing_up:**script.js:** Javascript vooral om chart aan te maken op d3. Hierin bevat ook enkele events.
 
 :page_facing_up:**events.js:** Hier worden alle javascript event functions opgeslagen
+
+<br>
 
 **Uitleg code**
 
